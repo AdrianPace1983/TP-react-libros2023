@@ -1,15 +1,16 @@
+import TituloLibro from "./TituloLibro";
+import libros from "./libros";
 
-import './App.css';
-import  './libros.css';
-function App() {
-  return (
-    <>
-    <libros/>
-   
-   <img src="libro1.webp" alt="libro1" />
-    
-    </>
+function App () {
+  return(
+
+    <div className="App">
+
+      {libros.map((libros,index)=>(
+        <TituloLibro key={index} titulo={libros.titulo} />
+      ))}  
+      
+    </div>
   );
 }
-
 export default App;
